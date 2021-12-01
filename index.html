@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      border: 0;
+    }
+
+    #menu {
+      display: flex;
+      justify-content: flex-end;
+      height: 10vh;
+      position: fixed;
+      width: 98vw;
+      align-items: center;
+      margin-bottom: 1vh;
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 2vw;
+      min-width: 300px;
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    .section {
+      height: 99vh;
+      margin-bottom: 1vh;
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    #sections {
+      padding-top: 11vh;
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    .content {
+      padding-top: 11vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='menu'>
+    <div class='menu'>
+      <a href="#news">News</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <div id='sections'>
+    <div class='section'>
+      <a name="news" id="news"></a>
+      <div class='content'>news content</div>
+    </div>
+    <div class='section'>
+      <a name="about" id="about"></a>
+      <div class='content'>about content</div>
+    </div>
+    <div class='section'>
+      <a name="contact" id="contact"></a>
+      <div class='content'>contact content</div>
+    </div>
+  </div>
+</body>
+
+</html>
