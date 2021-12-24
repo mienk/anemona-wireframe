@@ -8,19 +8,26 @@
   <title>Document</title>
   <style>
     body {
-      border: 0;
+      margin: 0;
+      --header-height: 20vh;
+    }
+
+    :target {
+      /* display: block; */
+      position: relative;
+      top: calc(var(--header-height) * -1);
+      /* visibility: hidden; */
     }
 
     #menu {
       display: flex;
       justify-content: flex-end;
-      height: 10vh;
+      height: var(--header-height);
       position: fixed;
-      width: 98vw;
+      width: 100%;
       align-items: center;
       margin-bottom: 1vh;
-      border-style: solid;
-      border-width: 1px;
+      background-color: aquamarine;
     }
 
     .menu {
@@ -28,25 +35,16 @@
       justify-content: center;
       gap: 2vw;
       min-width: 300px;
-      border-style: solid;
-      border-width: 1px;
-    }
-
-    .section {
-      height: 99vh;
-      margin-bottom: 1vh;
-      border-style: solid;
-      border-width: 1px;
+      offset-anchor: 25%;
     }
 
     #sections {
-      padding-top: 11vh;
-      border-style: solid;
-      border-width: 1px;
+      padding-top: var(--header-height);
     }
 
-    .content {
-      padding-top: 11vh;
+    .section {
+      height: 90vh;
+      width: calc(100% - 2px);
     }
   </style>
 </head>
@@ -63,15 +61,15 @@
   <div id='sections'>
     <div class='section'>
       <a name="news" id="news"></a>
-      <div class='content'>news content</div>
+      <div class='content'>news</div>
     </div>
     <div class='section'>
       <a name="about" id="about"></a>
-      <div class='content'>about content</div>
+      <div class='content'>about</div>
     </div>
     <div class='section'>
       <a name="contact" id="contact"></a>
-      <div class='content'>contact content</div>
+      <div class='content'>contact</div>
     </div>
   </div>
 </body>
